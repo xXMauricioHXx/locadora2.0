@@ -6,15 +6,15 @@ const Usuario = require("./usuario.model");
 
 const login = async (req, res, next) => {
   try {
-    const usuarioLogado = await Usuario.findOne(req.body);
-    if (!usuarioLogado) {
+    const usuarioLogado = await Usuario.findWhere(req.body);
+    if (!usuarioLogado || !usuarioLogado.length) {
       throw new AppError(
         ExceptionsContants.USUARIO_SEM_PERMISSAO_DE_ACESSO,
         401
       );
     }
     const token = jwt.sign(
-      { email: usuarioLogado.email },
+      { email: usuarioLogado[0].email },
       process.env.JWT_SECRET || "a@6T6N#vv54/21pWtGz33",
       {
         expiresIn: 8240
@@ -22,7 +22,7 @@ const login = async (req, res, next) => {
     );
     res.status(200).json({ token: token });
     return next();
-  } catch(err){
+  } catch (err) {
     return next(err);
   }
 };

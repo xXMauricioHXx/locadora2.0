@@ -20,7 +20,7 @@ CREATE TABLE filme (
   PRIMARY KEY(id)
 );
 
-CREATE TABLE filme_usuario (
+CREATE TABLE filme_cliente (
   cliente_id INTEGER UNSIGNED NOT NULL,
   filme_id INTEGER UNSIGNED NOT NULL,
   data_entrega DATE NULL,
