@@ -5,29 +5,24 @@ class Model {
     this.table = table;
   }
   findAll() {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const result = await knex.select().from(this.table);
-        resolve(result);
-      } catch (err) {
-        reject(err);
-      }
-    });
+    return knex.select().from(this.table);
   }
 
   findWhere(where) {
-    return new Promise(async (resolve, reject) => {
-      try {
-        resolve(
-          await knex
-            .select()
-            .from(this.table)
-            .where(where)
-        );
-      } catch (err) {
-        reject(err);
-      }
-    });
+    return knex
+      .select()
+      .from(this.table)
+      .where(where)
+  }
+
+  insert(data) {
+    return knex(this.table).insert(data);
+  }
+
+  update(where, data) {
+    return knex(this.table)
+      .where(where)
+      .update(data);
   }
 }
 
