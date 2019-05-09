@@ -1,4 +1,3 @@
-const knex = require("../../database/knex");
 const Model = require("../commom/model");
 class Usuario extends Model {
   constructor() {

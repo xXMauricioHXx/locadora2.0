@@ -3,30 +3,56 @@ const ExceptionsContants = require("../../exceptions/exceptionsContants");
 
 const Filme = require("./filme.model");
 const FilmeCliente = require("../filmeCliente/filmeCliente.model");
-const Cliente = require('../cliente/cliente.model');
+const Cliente = require("../cliente/cliente.model");
+
+const pesquisar = async (req, res, next) => {
+  try {
+    const { titulo } = req.query;    
+    const filme = titulo ? await Filme.procurarPorTitulo(titulo) : await Filme.findAll();
+    res.status(200).json(filme);
+  } catch (exception) {
+    return next(exception);
+  }
+};
 
 const alugar = async (req, res, next) => {
   try {
     const filme_id = req.body.filme_id;
     const cliente_id = req.body.cliente_id;
 
-    const [filme, cliente] = await Promise.all([Filme.findWhere({ id: filme_id }), Cliente.findWhere({ id: cliente_id })]);
+    const [filme, cliente] = await Promise.all([
+      Filme.findWhere({ id: filme_id }),
+      Cliente.findWhere({ id: cliente_id })
+    ]);
     if (!filme.length) {
-      throw new AppError(ExceptionsContants.FILME_NAO_CADASTRADO_NO_SISTEMA, 404);
+      throw new AppError(
+        ExceptionsContants.FILME_NAO_CADASTRADO_NO_SISTEMA,
+        404
+      );
     }
 
     if (!cliente.length) {
-      throw new AppError(ExceptionsContants.CLIENTE_NAO_CADASTRADO_NO_SISTEMA, 404);
+      throw new AppError(
+        ExceptionsContants.CLIENTE_NAO_CADASTRADO_NO_SISTEMA,
+        404
+      );
     }
-   
-    await Promise.all([Filme.update( {id: filme_id }, { numero_total_copias: filme[0].numero_total_copias - 1 }), FilmeCliente.insert(req.body)]);
+
+    await Promise.all([
+      Filme.update(
+        { id: filme_id },
+        { numero_total_copias: filme[0].numero_total_copias - 1 }
+      ),
+      FilmeCliente.insert(req.body)
+    ]);
 
     res.sendStatus(204);
-  } catch (err) {
-    return next(err);
+  } catch (exception) {
+    return next(exception);
   }
 };
 
 module.exports = {
-  alugar
+  alugar,
+  pesquisar
 };
