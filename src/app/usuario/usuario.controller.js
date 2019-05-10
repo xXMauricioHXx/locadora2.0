@@ -6,16 +6,16 @@ const Usuario = require("./usuario.model");
 
 const login = async (req, res, next) => {
   try {
-    const usuarioLogado = await Usuario.findWhere(req.body);
-    if (!usuarioLogado || !usuarioLogado.length) {
+    const usuario = await Usuario.findWhere(req.body);
+    if (!usuario || !usuario.length) {
       throw new AppError(
-        ExceptionsContants.USUARIO_SEM_PERMISSAO_DE_ACESSO,
+        ExceptionsContants.ERROR_USUARIO_SEM_PERMISSAO_DE_ACESSO,
         401
       );
     }
     const token = jwt.sign(
-      { email: usuarioLogado[0].email },
-      process.env.JWT_SECRET || "a@6T6N#vv54/21pWtGz33",
+      { email: usuario[0].email },
+      process.env.JWT_SECRET,
       {
         expiresIn: 8240
       }

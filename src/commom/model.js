@@ -26,7 +26,7 @@ class Model {
   }
 
   delete(where) {
-    return knex('table')
+    return knex(this.table)
       .where(where)
       .del();
   }

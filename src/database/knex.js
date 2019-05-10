@@ -1,10 +1,10 @@
 const knex = require("knex")({
-  client: "mysql2",
+  client: process.env.DB_CLIENT,
   connection: {
-    host: "db4free.net",
-    user: "admin_locadora",
-    password: "78b7015d",
-    database: "locadora"
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
   }
 });
 

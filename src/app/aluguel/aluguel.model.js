@@ -1,9 +1,9 @@
 const knex = require("../../database/knex");
 const Model = require('../commom/model');
 
-class FilmeCliente extends Model {
+class Aluguel extends Model {
   constructor() {
-    super('filme_cliente');
+    super('aluguel');
   }
 
   removerAluguel(cliente_id, filme_id) {
@@ -13,4 +13,4 @@ class FilmeCliente extends Model {
     .del();
   }
 }
-module.exports = new FilmeCliente();
+module.exports = new Aluguel();
