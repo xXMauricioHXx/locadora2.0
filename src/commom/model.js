@@ -24,6 +24,12 @@ class Model {
       .where(where)
       .update(data);
   }
+
+  delete(where) {
+    return knex('table')
+      .where(where)
+      .del();
+  }
 }
 
 module.exports = Model;
