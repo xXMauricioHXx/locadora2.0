@@ -7,7 +7,7 @@ router.use('/v1', usuariorRouter);
 router.use('/v1', filmeRouter);
 router.use('/v1', clienteRouter);
 
-router.get("*", (req, res, next) => {
+router.all("*", (req, res, next) => {
   res.sendStatus(404);
 });
 
