@@ -1,22 +1,7 @@
-[2019-05-13T08:50:24.443] [ERROR] errors - Unknown column 'cliente_id' in 'where clause' - Error: Error: select * from `usuario` where `cliente_id` = 1 and `filme_id` = 1 and `data_entrega` = '2019-05-08' - Unknown column 'cliente_id' in 'where clause'
-    at HandleError (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\src\exceptions\handleError.js:27:49)
-    at Layer.handle_error (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:315:13)
-    at C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:335:12)
-    at Immediate.next (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:275:10)
-    at Immediate._onImmediate (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:635:15)
-    at runCallback (timers.js:706:11)
-    at tryOnImmediate (timers.js:676:5)
-    at processImmediate (timers.js:658:5)
-[2019-05-13T08:51:25.456] [ERROR] errors - Unknown column 'cliente_id' in 'where clause' - Error: Error: select * from `usuario` where `cliente_id` = 1 and `filme_id` = 1 and `data_entrega` = '2019-05-08' - Unknown column 'cliente_id' in 'where clause'
-    at HandleError (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\src\exceptions\handleError.js:27:49)
-    at Layer.handle_error (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:315:13)
-    at C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:335:12)
-    at Immediate.next (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:275:10)
-    at Immediate._onImmediate (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:635:15)
-    at runCallback (timers.js:706:11)
-    at tryOnImmediate (timers.js:676:5)
-    at processImmediate (timers.js:658:5)
+[2019-05-13T19:17:26.427] [ERROR] errors - connect ETIMEDOUT
+[2019-05-13T19:17:52.313] [ERROR] errors - connect ETIMEDOUT
+[2019-05-13T19:18:39.358] [ERROR] errors - Cannot set headers after they are sent to the client
+[2019-05-13T19:24:50.350] [ERROR] errors - connect ETIMEDOUT
+[2019-05-13T19:25:41.033] [ERROR] errors - Aluguel não encontrado
+[2019-05-13T19:26:05.785] [ERROR] errors - Aluguel não encontrado
+[2019-05-13T19:26:12.432] [ERROR] errors - Aluguel não encontrado

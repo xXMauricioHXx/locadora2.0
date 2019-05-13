@@ -24,7 +24,7 @@ function HandleError(err, req, res, next) {
     };
   }
   
-  logger.error(`${this.error.error.message} - ${new Error(err).stack}`);
+  logger.error(`${this.error.error.message}`);
   res.status(err.httpCode || 500).json(error);
   next(err);
 }

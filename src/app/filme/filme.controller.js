@@ -11,7 +11,7 @@ const pesquisar = async (req, res, next) => {
   try {
     const { titulo } = req.query;
     const filme = titulo
-      ? await Filme.procurarPorTitulo(titulo)
+      ? await Filme.pesquisarPorTitulo(titulo)
       : await Filme.pesquisar();
     res.status(200).json(filme);
   } catch (exception) {
