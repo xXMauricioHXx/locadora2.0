@@ -6,7 +6,9 @@ class Filme extends Model {
   }
 
   procurarPorTitulo(titulo) {
-    return knex(this.table).where("titulo", "like", `%${titulo}%`);
+    return knex(this.table).rightJoin('diretor', function() {
+     this.on("diretor.id", "=", "filme.diretor_id") 
+    }).where("titulo", "like", `%${titulo}%`);
   }
 
   pesquisar() {
