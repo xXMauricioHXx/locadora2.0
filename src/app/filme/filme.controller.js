@@ -12,7 +12,7 @@ const pesquisar = async (req, res, next) => {
     const { titulo } = req.query;
     const filme = titulo
       ? await Filme.procurarPorTitulo(titulo)
-      : await Filme.findAll();
+      : await Filme.pesquisar();
     res.status(200).json(filme);
   } catch (exception) {
     return next(exception);
