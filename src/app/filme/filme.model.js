@@ -1,5 +1,5 @@
 const knex = require("../../database/knex");
-const Model = require("../commom/model");
+const Model = require("../../commom/model");
 class Filme extends Model {
   constructor() {
     super("filme");

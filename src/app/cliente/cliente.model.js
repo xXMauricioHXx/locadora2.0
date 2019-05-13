@@ -1,4 +1,4 @@
-const Model = require("../commom/model");
+const Model = require("../../commom/model");
 class Cliente extends Model {
   constructor() {
     super("cliente");

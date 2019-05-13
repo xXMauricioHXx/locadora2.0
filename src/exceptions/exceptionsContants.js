@@ -4,7 +4,7 @@ module.exports = Object.freeze({
     message: "Usuário não possuí permissão de acesso",
     code: 1
   },
-  ERROR_USUARIO_TOKEN_DE_ACESSO_MODIFICADO: {
+  ERROR_USUARIO_TOKEN_DE_ACESSO_INVALIDO_OU_MODIFICADO: {
     message: "Token de acesso inválido ou modificado",
     code: 2
   },
@@ -28,5 +28,11 @@ module.exports = Object.freeze({
   ERROR_CLIENTE_NAO_CADASTRADO_NO_SISTEMA: {
     message: 'Cliente não cadastrado no sistema',
     code: 2001
+  },
+
+  //ALUGUEL (3001 - 4000)
+  ERROR_ALUGUEL_NAO_ENCONTRADO: {
+    message: 'Aluguel não encontrado',
+    code: 3001
   }
 });
