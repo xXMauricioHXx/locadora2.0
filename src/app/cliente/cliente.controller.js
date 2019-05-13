@@ -10,7 +10,7 @@ const insert = (req, res, next) => {
 
 const pesquisar = (req, res, next) => {
   Cliente.findAll()
-    .then(clientes => res.sendStatus(200).json(clientes))
+    .then(clientes => res.status(200).json(clientes))
     .catch(next);
 };
 
