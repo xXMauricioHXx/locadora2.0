@@ -15,8 +15,8 @@ npm install
 node run dev
 ```
 
-Para acessar a documentação da API clique [aqui](https://expressjs.com/pt-br/).
-
+Para acessar a documentação da API clique [aqui](https://documenter.getpostman.com/view/2993532/S1LyTSD5?version=latest).
+OBS.: Para fazer a função de logof da API basta não enviar o token de acesso no header da requisição.
 
 ## Construido com
 
