@@ -1,12 +1,22 @@
-[2019-05-12T21:30:07.657] [ERROR] errors - connect ETIMEDOUT
-[2019-05-12T21:31:03.708] [ERROR] errors - Aluguel não encontrado
-[2019-05-12T21:32:50.301] [ERROR] errors - Error.trace is not a function
-[2019-05-12T21:35:10.793] [ERROR] errors - Aluguel não encontrado
-[2019-05-12T21:36:10.430] [ERROR] errors - connect ETIMEDOUT
-[2019-05-12T21:37:11.066] [ERROR] errors - connect ETIMEDOUT
-[2019-05-12T21:38:20.657] [ERROR] errors - Aluguel não encontrado
-[2019-05-12T21:38:58.648] [ERROR] errors - connect ETIMEDOUT
-[2019-05-12T21:39:26.140] [ERROR] errors - Aluguel não encontrado
-[2019-05-12T21:39:40.171] [ERROR] errors - Aluguel não encontrado
-[2019-05-12T21:39:54.090] [ERROR] errors - Aluguel não encontrado
-[2019-05-12T21:42:25.415] [ERROR] errors - Aluguel não encontrado - Error
+[2019-05-13T08:50:24.443] [ERROR] errors - Unknown column 'cliente_id' in 'where clause' - Error: Error: select * from `usuario` where `cliente_id` = 1 and `filme_id` = 1 and `data_entrega` = '2019-05-08' - Unknown column 'cliente_id' in 'where clause'
+    at HandleError (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\src\exceptions\handleError.js:27:49)
+    at Layer.handle_error (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\layer.js:71:5)
+    at trim_prefix (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:315:13)
+    at C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:335:12)
+    at Immediate.next (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:275:10)
+    at Immediate._onImmediate (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:635:15)
+    at runCallback (timers.js:706:11)
+    at tryOnImmediate (timers.js:676:5)
+    at processImmediate (timers.js:658:5)
+[2019-05-13T08:51:25.456] [ERROR] errors - Unknown column 'cliente_id' in 'where clause' - Error: Error: select * from `usuario` where `cliente_id` = 1 and `filme_id` = 1 and `data_entrega` = '2019-05-08' - Unknown column 'cliente_id' in 'where clause'
+    at HandleError (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\src\exceptions\handleError.js:27:49)
+    at Layer.handle_error (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\layer.js:71:5)
+    at trim_prefix (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:315:13)
+    at C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:335:12)
+    at Immediate.next (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:275:10)
+    at Immediate._onImmediate (C:\Users\mauricio.henrique\Desktop\Mauricio\locadora2.0\node_modules\express\lib\router\index.js:635:15)
+    at runCallback (timers.js:706:11)
+    at tryOnImmediate (timers.js:676:5)
+    at processImmediate (timers.js:658:5)
